@@ -18,7 +18,9 @@ COPY ./requirements.txt .
 RUN pip install -r requirements.txt
 
 # copy project
-COPY app .
+COPY . .
 
 
-ENTRYPOINT [ "./start_server.sh" ]
+RUN ["chmod", "+x", "/usr/src/app/start_server.sh"]
+
+ENTRYPOINT ["sh", "/usr/src/app/start_server.sh" ]

@@ -1,0 +1,54 @@
+{
+	"info": {
+		"_postman_id": "e93b450c-53f5-4f2f-9e3e-4f156179d83c",
+		"name": "url-short",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "5601600"
+	},
+	"item": [
+		{
+			"name": "get url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/short_url/?converted_url=xzq7jik3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"short_url",
+						""
+					],
+					"query": [
+						{
+							"key": "converted_url",
+							"value": "xzq7jik3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create url",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"original_url\":\"https://www.youtube.com/taskin3\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8000/short_url/"
+			},
+			"response": []
+		}
+	]
+}
